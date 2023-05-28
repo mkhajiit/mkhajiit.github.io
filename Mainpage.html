@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My First chrome App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="weather-container hidden">
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container">
+            <div id="clock"></div>
+        </div>
+        <div class="container">
+            <form id="login">
+                <div id="notification">Please login to use Todolist and weather</div>
+                <input type="text" placeholder="아이디를 JHY로 입력하세요" required maxlength="12"/>
+                <div class="l-btn button">
+                    <button>Login</button>
+                </div>
+            </form>
+            <h1 id="greeting" class="hidden"></h1>
+        </div>
+    </div>
+
+    <div class="todo-container">
+        <form id="todo-form" class="hidden">
+            <input type="text" placeholder="Write a To Do and Press Enter" required />
+        </form>
+        <ul id="todo-list" class="hidden"></ul>
+    </div>
+    <script src="src/login.js"></script>
+    <script src="src/clock.js"></script>
+    <script src="src/background.js"></script>
+    <script src="src/todo.js"></script>
+    <script src="src/weather.js"></script>
+</body>
+</html>

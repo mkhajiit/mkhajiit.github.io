@@ -1,0 +1,115 @@
+*{
+    color:white;
+    font-family:'Times New Roman', Times, serif;
+}
+
+input,button{
+    color:black;
+}
+
+#notification{
+    text-align: center;
+    width:30vmax;
+    font-size: 2rem;
+}
+
+.hidden{
+    display:none;
+}
+
+body{
+    width:100%;
+    height: 100vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-container{
+    margin: 100px auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#clock{
+    font-size: 11vw;
+}
+
+#login input{
+    margin-top: 50px;
+}
+
+button{
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin: 5px auto;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+button::after { 
+    content: '';
+    width: 20px; height: 20px;
+    border-radius: 100%;
+    border: 8px solid white;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: none;
+}
+
+button:hover::after, button:focus::after {
+    animation: ring 1.5s infinite;
+}
+
+.l-btn{
+    text-align: center;
+}
+
+input{
+    width: 30vmax;
+    height: 2em;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: white;
+  }
+
+.todo-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#weather{
+    text-align: center;
+}
+
+#weather span{
+    font-size:3vw;
+    color:white;
+}
+
+@keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 200px;
+      height: 200px;
+      opacity: 0;
+    }
+  }
